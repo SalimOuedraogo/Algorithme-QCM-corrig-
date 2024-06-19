@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #F8F8F8;
+}
+.sc0 {
+}
+.sc2 {
+	font-weight: bold;
+	color: #808080;
+}
+.sc3 {
+}
+.sc4 {
+	color: #FF00FF;
+}
+.sc5 {
+	font-weight: bold;
+	color: #FF8000;
+}
+.sc6 {
+	font-weight: bold;
+	font-style: italic;
+	color: #FF0080;
+}
+.sc7 {
+	font-weight: bold;
+	color: #FF0000;
+}
+.sc8 {
+	font-weight: bold;
+	color: #0080FF;
+}
+.sc12 {
+	font-weight: bold;
+	color: #8080FF;
+}
+.sc17 {
+	font-weight: bold;
+	color: #0080C0;
+}
+.sc18 {
+	font-weight: bold;
+	font-style: italic;
+}
+.sc24 {
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #0B161D; "><span class="sc18">**Ecrire un algorithme qui initialise un tableau de taille 7 aux jours de la semaine ("Lundi", "Mardi", ...) 
+sauf le Dimanche et une chaîne de caractères de taille 8 à Dimanche. Ensuite, 
+initialiser le dernier élément du tableau avec la chaîne de caractères. 
+Afficher enfin chaque élément du tableau via la boucle Pour.**</span><span class="sc24">
+
+</span><span class="sc5">Debut</span><span class="sc24"> </span><span class="sc0">JourSemaine</span><span class="sc24">
+
+</span><span class="sc7">Var</span><span class="sc24">
+    </span><span class="sc0">TableauSemaine</span><span class="sc12">[</span><span class="sc3">7</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc0">:</span><span class="sc24"> </span><span class="sc4">chaine</span><span class="sc24"> </span><span class="sc2">// Tableau de chaine dont chaque indice va contient un jour de la semaine
+</span><span class="sc24">    </span><span class="sc0">DernierJour</span><span class="sc12">[</span><span class="sc3">8</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc0">:</span><span class="sc24"> </span><span class="sc4">chaine</span><span class="sc24"> </span><span class="sc2">// Chaine de caractère qui va contenir le dernier jour de la semaine
+</span><span class="sc24">    </span><span class="sc0">i</span><span class="sc24"> </span><span class="sc0">:</span><span class="sc24"> </span><span class="sc4">entier</span><span class="sc24"> </span><span class="sc2">// Compteur de la boucle et indice du tableau
+</span><span class="sc24">    
+</span><span class="sc5">Debut</span><span class="sc24">
+    </span><span class="sc2">// Initialisation du dernier jour de la semaine
+</span><span class="sc24">    </span><span class="sc0">DernierJour</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc17">"Dimanche"</span><span class="sc24">
+    
+    </span><span class="sc2">// Initialisation du tableau
+</span><span class="sc24">    </span><span class="sc0">TableauSemaine</span><span class="sc12">[</span><span class="sc3">1</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc17">"Lundi"</span><span class="sc24">
+    </span><span class="sc0">TableauSemaine</span><span class="sc12">[</span><span class="sc3">2</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc17">"Mardi"</span><span class="sc24">
+    </span><span class="sc0">TableauSemaine</span><span class="sc12">[</span><span class="sc3">3</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc17">"Mercredi"</span><span class="sc24">
+    </span><span class="sc0">TableauSemaine</span><span class="sc12">[</span><span class="sc3">4</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc17">"Jeudi"</span><span class="sc24">
+    </span><span class="sc0">TableauSemaine</span><span class="sc12">[</span><span class="sc3">5</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc17">"Vendredi"</span><span class="sc24">
+    </span><span class="sc0">TableauSemaine</span><span class="sc12">[</span><span class="sc3">6</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc17">"Samedi"</span><span class="sc24">
+    
+    </span><span class="sc2">// Initialisation du ternier terme par la variable chaine à taille fixe qui contient la chaine "Dimanche"
+</span><span class="sc24">    </span><span class="sc0">TableauSemaine</span><span class="sc12">[</span><span class="sc3">7</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">DernierJour</span><span class="sc24">
+    
+    </span><span class="sc2">//Afficher le résultat
+</span><span class="sc24">    </span><span class="sc6">Pour</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">0;</span><span class="sc24"> </span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">&lt;</span><span class="sc24"> </span><span class="sc0">7;</span><span class="sc24"> </span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">+</span><span class="sc24"> </span><span class="sc3">1</span><span class="sc12">)</span><span class="sc24"> </span><span class="sc6">Faire</span><span class="sc24">
+        </span><span class="sc8">Ecrire</span><span class="sc12">(</span><span class="sc0">TableauSemaine</span><span class="sc12">[</span><span class="sc0">i</span><span class="sc12">])</span><span class="sc24">
+    </span><span class="sc6">FinPour</span><span class="sc24">
+</span><span class="sc5">Fin</span><span class="sc24">
+
+</span></div></body>
+</html>

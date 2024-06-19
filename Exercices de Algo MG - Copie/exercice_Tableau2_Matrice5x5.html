@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #F8F8F8;
+}
+.sc0 {
+}
+.sc2 {
+	font-weight: bold;
+	color: #808080;
+}
+.sc3 {
+}
+.sc4 {
+	color: #FF00FF;
+}
+.sc5 {
+	font-weight: bold;
+	color: #FF8000;
+}
+.sc6 {
+	font-weight: bold;
+	font-style: italic;
+	color: #FF0080;
+}
+.sc7 {
+	font-weight: bold;
+	color: #FF0000;
+}
+.sc8 {
+	font-weight: bold;
+	color: #0080FF;
+}
+.sc12 {
+	font-weight: bold;
+	color: #8080FF;
+}
+.sc18 {
+	font-weight: bold;
+	font-style: italic;
+}
+.sc24 {
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #0B161D; "><span class="sc18">**Ecrivez un algorithme qui initialise un tableau à deux dimensions de 5x5 avec des 0 sur la diagonale principale et des 1 partout ailleurs.**</span><span class="sc24">
+</span><span class="sc18">**On sait que la diagoanle principale d'une matrice est la diagonale dont les indices de la ligne et du tableau correspondent ex. [1][1], [2][2], ... **</span><span class="sc24">
+
+</span><span class="sc5">Algo</span><span class="sc24"> </span><span class="sc0">matrice5x5</span><span class="sc24">
+
+</span><span class="sc2">// Declaration des constantes 0 et 1 pour faciliter une modification ultérieur (pas forcément nécessaire)
+</span><span class="sc7">Const</span><span class="sc24">
+    </span><span class="sc0">un</span><span class="sc24"> </span><span class="sc12">=</span><span class="sc24"> </span><span class="sc3">1</span><span class="sc24"> 
+    </span><span class="sc0">zero</span><span class="sc24"> </span><span class="sc12">=</span><span class="sc24"> </span><span class="sc3">0</span><span class="sc24">
+
+</span><span class="sc7">Var</span><span class="sc24">
+    </span><span class="sc0">M</span><span class="sc12">[</span><span class="sc3">5</span><span class="sc12">][</span><span class="sc3">5</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc0">:</span><span class="sc24"> </span><span class="sc4">entier</span><span class="sc24"> </span><span class="sc2">// Matrice qui va recuillir les données
+</span><span class="sc24">    </span><span class="sc0">i</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc0">j</span><span class="sc24"> </span><span class="sc0">:</span><span class="sc24"> </span><span class="sc4">entier</span><span class="sc24"> </span><span class="sc2">// A la fois compteur de boucle et indices de la matrice M[i][j]
+</span><span class="sc24">    
+</span><span class="sc5">Debut</span><span class="sc24">
+    </span><span class="sc2">// Initialisation
+</span><span class="sc24">    </span><span class="sc6">Pour</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">0;</span><span class="sc24"> </span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">&lt;</span><span class="sc24"> </span><span class="sc0">5;</span><span class="sc24"> </span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">+</span><span class="sc24"> </span><span class="sc3">1</span><span class="sc12">)</span><span class="sc24"> </span><span class="sc6">Faire</span><span class="sc24">
+        </span><span class="sc6">Pour</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc0">j</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">0;</span><span class="sc24"> </span><span class="sc0">j</span><span class="sc24"> </span><span class="sc12">&lt;</span><span class="sc24"> </span><span class="sc0">5;</span><span class="sc24"> </span><span class="sc0">j</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">j</span><span class="sc24"> </span><span class="sc12">+</span><span class="sc24"> </span><span class="sc3">1</span><span class="sc12">)</span><span class="sc24"> </span><span class="sc6">Faire</span><span class="sc24">
+            </span><span class="sc2">// On vérifie si i correspond à j on initialise à 0 sinon on initialise à 1
+</span><span class="sc24">            </span><span class="sc6">Si</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">=</span><span class="sc24"> </span><span class="sc0">j</span><span class="sc12">)</span><span class="sc24"> </span><span class="sc6">Alors</span><span class="sc24">
+                </span><span class="sc0">M</span><span class="sc12">[</span><span class="sc0">i</span><span class="sc12">][</span><span class="sc0">j</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">zero</span><span class="sc24">
+            </span><span class="sc6">Sinon</span><span class="sc24">
+                </span><span class="sc0">M</span><span class="sc12">[</span><span class="sc0">i</span><span class="sc12">][</span><span class="sc0">j</span><span class="sc12">]</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">un</span><span class="sc24">
+            </span><span class="sc6">FinSi</span><span class="sc24">
+        </span><span class="sc6">FinPour</span><span class="sc24">
+    </span><span class="sc6">FinPour</span><span class="sc24">
+    
+    </span><span class="sc2">// On affiche le résultat
+</span><span class="sc24">    </span><span class="sc6">Pour</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">0;</span><span class="sc24"> </span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">&lt;</span><span class="sc24"> </span><span class="sc0">5;</span><span class="sc24"> </span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">i</span><span class="sc24"> </span><span class="sc12">+</span><span class="sc24"> </span><span class="sc3">1</span><span class="sc12">)</span><span class="sc24"> </span><span class="sc6">Faire</span><span class="sc24">
+        </span><span class="sc6">Pour</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc0">j</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">0;</span><span class="sc24"> </span><span class="sc0">j</span><span class="sc24"> </span><span class="sc12">&lt;</span><span class="sc24"> </span><span class="sc0">5;</span><span class="sc24"> </span><span class="sc0">j</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">j</span><span class="sc24"> </span><span class="sc12">+</span><span class="sc24"> </span><span class="sc3">1</span><span class="sc12">)</span><span class="sc24"> </span><span class="sc6">Faire</span><span class="sc24">
+            </span><span class="sc8">Ecrire</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc0">M</span><span class="sc12">[</span><span class="sc0">i</span><span class="sc12">][</span><span class="sc0">j</span><span class="sc12">])</span><span class="sc24">
+        </span><span class="sc6">FinPour</span><span class="sc24">
+    </span><span class="sc6">FinPour</span><span class="sc24">
+</span><span class="sc5">Fin</span><span class="sc24">
+</span></div></body>
+</html>

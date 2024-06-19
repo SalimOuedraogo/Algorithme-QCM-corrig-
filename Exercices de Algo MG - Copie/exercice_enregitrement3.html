@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #F8F8F8;
+}
+.sc0 {
+}
+.sc1 {
+	font-style: italic;
+	color: #808080;
+}
+.sc2 {
+	font-weight: bold;
+	color: #808080;
+}
+.sc4 {
+	color: #FF00FF;
+}
+.sc5 {
+	font-weight: bold;
+	color: #FF8000;
+}
+.sc7 {
+	font-weight: bold;
+	color: #FF0000;
+}
+.sc8 {
+	font-weight: bold;
+	color: #0080FF;
+}
+.sc9 {
+	font-weight: bold;
+	font-style: italic;
+	color: #FF0080;
+}
+.sc11 {
+	color: #FF00FF;
+}
+.sc12 {
+	font-weight: bold;
+	color: #8080FF;
+}
+.sc17 {
+	font-weight: bold;
+	color: #0080C0;
+}
+.sc18 {
+	font-weight: bold;
+	font-style: italic;
+}
+.sc24 {
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #0B161D; "><span class="sc18">**Ecrivez un algorithme qui utilise un enregistrement pour représenter un point 2D (avec les champs `x` et `y`) 
+et qui calcule la distance entre deux points saisis par l'utilisateur.**</span><span class="sc24">
+
+</span><span class="sc5">Algo</span><span class="sc24"> </span><span class="sc0">Distance2Points</span><span class="sc24">
+
+</span><span class="sc7">Type</span><span class="sc24">
+    </span><span class="sc9">Enregistrement</span><span class="sc24"> </span><span class="sc0">Point2D</span><span class="sc24">
+        </span><span class="sc0">x</span><span class="sc24"> </span><span class="sc0">:</span><span class="sc24"> </span><span class="sc4">entier</span><span class="sc24">
+        </span><span class="sc0">y</span><span class="sc24"> </span><span class="sc0">:</span><span class="sc24"> </span><span class="sc4">entier</span><span class="sc24">
+    </span><span class="sc9">FinEnregistrement</span><span class="sc24">
+
+</span><span class="sc7">Var</span><span class="sc24">
+    </span><span class="sc0">P1</span><span class="sc24"> </span><span class="sc0">:</span><span class="sc24"> </span><span class="sc11">Type_Point2D</span><span class="sc24"> </span><span class="sc2">// Variable qui recceuillir les coordonnées du premier point
+</span><span class="sc24">    </span><span class="sc0">P2</span><span class="sc24"> </span><span class="sc0">:</span><span class="sc24"> </span><span class="sc11">Type_Point2D</span><span class="sc24"> </span><span class="sc2">// Variable qui recceuillir les coordonnées du deuxième point
+</span><span class="sc24">    </span><span class="sc0">Distance</span><span class="sc24"> </span><span class="sc0">:</span><span class="sc24"> </span><span class="sc4">reel</span><span class="sc24"> </span><span class="sc2">// Valeur de la distance entre les deux points
+</span><span class="sc24">
+</span><span class="sc5">Debut</span><span class="sc24">
+    </span><span class="sc2">// Demande de saisies des coordonnées des deux points
+</span><span class="sc24">    </span><span class="sc8">Ecrire</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc17">"Entrer les coordonnées du premier point x et y :"</span><span class="sc12">)</span><span class="sc24">
+    </span><span class="sc8">Lire</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc0">P1.x</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc0">P1.y</span><span class="sc12">)</span><span class="sc24">
+    </span><span class="sc8">Ecrire</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc17">"Entrer les coordonnées du deuxième point x et y :"</span><span class="sc12">)</span><span class="sc24">
+    </span><span class="sc8">Lire</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc0">P2.x</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc0">P2.y</span><span class="sc12">)</span><span class="sc24">
+    
+    </span><span class="sc1">/* Calcule de la disatnce. 
+    (Formule) Distance = racine carrée (carrée de (x2 - x1) + carrée de (y2 - y1)) */</span><span class="sc24">
+    </span><span class="sc0">Distance</span><span class="sc24"> </span><span class="sc12">&lt;--</span><span class="sc24"> </span><span class="sc0">sqrt</span><span class="sc12">(</span><span class="sc0">sqr</span><span class="sc12">(</span><span class="sc0">P2.x</span><span class="sc24"> </span><span class="sc12">-</span><span class="sc24"> </span><span class="sc0">P1.x</span><span class="sc12">)</span><span class="sc24"> </span><span class="sc12">+</span><span class="sc24"> </span><span class="sc0">sqr</span><span class="sc12">(</span><span class="sc0">P2.y</span><span class="sc24"> </span><span class="sc12">-</span><span class="sc24"> </span><span class="sc0">P1.y</span><span class="sc12">))</span><span class="sc24">
+    
+    </span><span class="sc2">// On peut afficher le résultat d'une manière complète
+</span><span class="sc24">    </span><span class="sc8">Ecrire</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc17">"Distance entre P1("</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc0">P1.x</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc17">","</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc0">P1.y</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc17">") et P2("</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc0">P2.x</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc17">","</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc0">P2.y</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc17">") = "</span><span class="sc12">,</span><span class="sc24"> </span><span class="sc0">Distance</span><span class="sc12">)</span><span class="sc24">
+    
+</span><span class="sc5">Fin</span><span class="sc24">
+    </span></div></body>
+</html>
